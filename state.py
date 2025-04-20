@@ -1,9 +1,20 @@
+import time
+
 setup_state = 0
 collision_state = 0
 light_state = 0
 brownout_state = 0
 power_surge_state = 0
 threshold = 40
+collision_reported = False
+last_report_time = time.time()
+
+def get_last_report_time():
+    return last_report_time
+
+def set_last_report_time(time):
+    global last_report_time
+    last_report_time = time
 
 def set_setup_mode(state: int):
     global setup_state
@@ -46,3 +57,10 @@ def get_threshold():
 def set_threshold(new_threshold: int):
     global threshold
     threshold = new_threshold
+    
+def set_collision_reported(flag: bool):
+    global collision_reported
+    collision_reported = flag
+
+def get_collision_reported():
+    return collision_reported
