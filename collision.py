@@ -24,5 +24,5 @@ def check_collision():
         if state.get_collision_state() != 1:
             state.set_collision_state(1)
             display.flash_all_leds()
-    print("Collision State ", state.get_collision_state())
+    # print("Collision State ", state.get_collision_state())
     prev_x, prev_y, prev_z = x, y, z

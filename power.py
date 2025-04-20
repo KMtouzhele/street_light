@@ -16,5 +16,5 @@ def check_power():
     if temp >= 0 and temp <=100:
         state.set_brownout_state(0)
         state.set_power_surge_state(0)
-    print("brownout ", state.get_brownout_state())
-    print("surge ", state.get_power_surge_state())
+    # print("brownout ", state.get_brownout_state())
+    # print("surge ", state.get_power_surge_state())
